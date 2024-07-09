@@ -19,7 +19,7 @@ export const Experience = () => {
       <group position-y={-1} >     
         <ContactShadows
           opacity={0.42}
-          scale={10}
+          scale={10} 
           blur={1}
           far={10}
           resolution={256}
