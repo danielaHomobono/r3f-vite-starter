@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from "react";
 import * as THREE from "three";
 
 export function Avatar(props) {
-  const { animation, section } = props;
+  const { animation } = props;
   const { headFolllow, cursorFollow, wireframe } = useControls({
     headFolllow: false,
     cursorFollow: false,
@@ -22,32 +22,21 @@ export function Avatar(props) {
   standingAnimations[0].name = "Standing";
   fallingAnimations[0].name = "Falling";
 
+  console.log("Loaded animations:", {
+    typing: typingAnimations[0].name,
+    standing: standingAnimations[0].name,
+    falling: fallingAnimations[0].name,
+  });
+
   const { actions } = useAnimations([typingAnimations[0], standingAnimations[0], fallingAnimations[0]], group);
 
   useFrame((state) => {
-    if (section === 0) {
-      const head = group.current.getObjectByName("Head");
-      const spine2 = group.current.getObjectByName("Spine2");
-
-      if (headFolllow && head) {
-        head.lookAt(state.camera.position);
-      }
-
-      if (cursorFollow && spine2) {
-        const mouse = new THREE.Vector3(
-          (state.mouse.x * state.viewport.width) / 2,
-          (state.mouse.y * state.viewport.height) / 2,
-          0.5
-        );
-
-        mouse.unproject(state.camera);
-        mouse.sub(state.camera.position).normalize();
-
-        const distance = -state.camera.position.z / mouse.z;
-        const position = state.camera.position.clone().add(mouse.multiplyScalar(distance));
-
-        spine2.lookAt(position);
-      }
+    if (headFolllow) {
+      group.current.getObjectByName("Head").lookAt(state.camera.position);
+    }
+    if (cursorFollow) {
+      const target = new THREE.Vector3(state.mouse.x, state.mouse.y, 1);
+      group.current.getObjectByName("Spine2").lookAt(target);
     }
   });
 
@@ -71,24 +60,6 @@ export function Avatar(props) {
   }, [wireframe]);
 
 
-  useEffect(() => {
-    if (actions[animation]) {
-      actions[animation].reset().fadeIn(0.5).play();
-    } else {
-      console.warn(`Animation ${animation} not found`);
-    }
-    return () => {
-      if (actions[animation]) {
-        actions[animation].reset().fadeOut(0.5);
-      }
-    };
-  }, [animation]);
-
-  useEffect(() => {
-    Object.values(materials).forEach((material) => {
-      material.wireframe = wireframe;
-    });
-  }, [wireframe]);
 
   return (
     <group {...props} ref={group} dispose={null}>
