@@ -48,14 +48,14 @@ export const Interface = () => {
 const AboutSection = () => {
   return (
     <Section mobileTop className="p-8 rounded-lg shadow-lg">
-      <div className="font-mono text-lg">
-        <p className="text-5xl font-bold leading-snug tracking-tight text-gray-800">
+      <div className="font-mono text-2xl font-extrabold">
+        <p className="text-6xl font-bold leading-snug tracking-tight text-gray-800">
           Hi, I'm
           <br />
           <span className="text-blue-400 px-1">Daniela Homobono</span>
         </p>
         <motion.p
-          className="text-lg text-green-400 mt-4 font-semibold"
+          className="text-2xl text-blue-400 mt-4 font-extrabold"
           initial={{
             opacity: 0,
             y: 25,
@@ -74,7 +74,7 @@ const AboutSection = () => {
           always learning new skills.
         </motion.p>
         <motion.div
-          className="text-lg mt-8 font-semibold"
+          className="text-2xl mt-8 font-extrabold"
           initial={{
             opacity: 0,
             y: 25,
@@ -108,7 +108,7 @@ const AboutSection = () => {
           </p>
         </motion.div>
         <motion.button
-          className="bg-blue-400 text-white py-4 px-8 rounded-lg font-bold text-lg mt-16"
+          className="bg-blue-400 text-white py-4 px-8 rounded-lg font-bold text-2xl mt-16"
           initial={{
             opacity: 0,
             y: 25,
@@ -170,10 +170,7 @@ const languages = [
     title: "🇺🇸 English",
     level: 80,
   },
-  {
-    title: "🇯🇵 Japanese",
-    level: 20,
-  },
+  
 ];
 
 const SkillsSection = () => {
