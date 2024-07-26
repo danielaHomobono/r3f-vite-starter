@@ -54,10 +54,10 @@ const AboutSection = () => {
         <p className="text-6xl font-bold leading-snug tracking-tight text-gray-800">
           Hi, I'm
           <br />
-          <span className="text-blue-400 px-1">Daniela Homobono</span>
+          <span className="text-white px-1 font-extrabold">Daniela Homobono</span>
         </p>
         <motion.p
-          className="text-2xl text-blue-400 mt-4 font-extrabold"
+          className="text-4xl text-gray-800 mt-4 font-bold"
           initial={{
             opacity: 0,
             y: 25,
@@ -76,7 +76,7 @@ const AboutSection = () => {
           always learning new skills.
         </motion.p>
         <motion.div
-          className="text-2xl mt-8 font-extrabold"
+          className="text-xxl mt-8 font-bold text-gray-600"
           initial={{
             opacity: 0,
             y: 25,
@@ -94,23 +94,23 @@ const AboutSection = () => {
             const aboutMe = &#123;
           </p>
           <p className="ml-4 text-gray-800">
-            profession: <span className="text-blue-400">"Developer"</span>,
+            profession: <span className="text-white">"Developer"</span>,
           </p>
           <p className="ml-4 text-gray-800">
-            passion: <span className="text-blue-400">"Always learning new skills"</span>,
+            passion: <span className="text-white">"Always learning new skills"</span>,
           </p>
           <p className="ml-4 text-gray-800">
-            currentFocus: <span className="text-blue-400">"Studying software development"</span>
+            currentFocus: <span className="text-white">"Studying software development"</span>
           </p>
           <p className="text-gray-800">
             &#125;;
           </p>
           <p className="mt-4 text-gray-800">
-            console.log(<span className="text-orange-500">"Turning ideas into reality!"</span>);
+            console.log(<span className="text-blue-400">"Turning ideas into reality!"</span>);
           </p>
         </motion.div>
         <motion.button
-          className="bg-blue-400 text-white py-4 px-8 rounded-lg font-bold text-2xl mt-16"
+          className="bg-blue-400 text-white py-4 px-8 rounded-lg font-bold text-xl mt-16"
           initial={{
             opacity: 0,
             y: 25,
@@ -136,6 +136,9 @@ const AboutSection = () => {
 
 
 
+
+
+
 const skills = [
   {
     title: "Threejs / React Three Fiber",
@@ -155,7 +158,7 @@ const skills = [
   },
   {
     title: "3D Modeling",
-    level: 40,
+    level: 30,
   },
   {
     title: "C#",
@@ -287,14 +290,14 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="flex w-full h-full gap-8 items-center justify-center">
+      <div className="font-mono-extrabold flex w-full h-full gap-8 items-center justify-center mt-60">
         <button
           className="hover:text-indigo-600 transition-colors mt-8"
           onClick={previousProject}
         >
           ← Previous
         </button>
-        <h2 className="text-5xl font-bold mt-8">Projects</h2>
+        <h2 className="text-5xl font-bold  mt-10 ">Projects</h2>
         <button
           className="hover:text-indigo-600 transition-colors mt-8"
           onClick={nextProject}
@@ -305,6 +308,7 @@ const ProjectsSection = () => {
     </Section>
   );
 };
+
 
 
 

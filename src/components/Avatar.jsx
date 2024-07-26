@@ -80,3 +80,5 @@ export function Avatar(props) {
 }
 
 useGLTF.preload('models/65b10d74a8cd1dfdd70b6dd1.glb');
+
+

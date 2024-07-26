@@ -13,6 +13,7 @@ import { framerMotionConfig } from "./config";
 function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
+  
 
   useEffect(() => {
     setMenuOpened(false);
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <>
+    
       <MotionConfig
         transition={{
           ...framerMotionConfig,
@@ -33,7 +35,7 @@ function App() {
               <Experience section={section} menuOpened={menuOpened} />
             </Scroll>
             <Scroll html>
-              <Interface setSection={setSection} />
+             <Interface setSection={setSection} />
             </Scroll>
           </ScrollControls>
         </Canvas>
@@ -50,3 +52,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

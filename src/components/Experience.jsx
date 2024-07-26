@@ -62,7 +62,7 @@ export const Experience = (props) => {
       <Background />
       <motion.group
         position={[1.9072935059634513, 0.14400000000000002, 0.681801948466054]}
-        scale={[1.2, 1.2, 1.2]}
+        scale={[1.8, 1.8, 1.8]}
         animate={"" + section}
         transition={{
           duration: 0.6,
@@ -83,15 +83,15 @@ export const Experience = (props) => {
             rotateZ: 0,
           },
           2: {
-            x: -9,
-            y: -viewport.height * 2 + 0.5 ,
-            z: 0,
-            rotateX: 0,
+            x: -7,
+            y: -viewport.height * 2.15 + 0.5,
+            z: 1,
+            rotateX: -0.3,
             rotateY: Math.PI / 2,
             rotateZ: 0,
           },
           3: {
-            y: -viewport.height * 3 + 1,
+            y: -viewport.height * 3 + 0.4,
             x: 0.3,
             z: 8.5,
             rotateX: 0,
@@ -127,7 +127,7 @@ export const Experience = (props) => {
           y: section === 1 ? -viewport.height : -1.5,
         }}
       >
-        <directionalLight position={[-5, 3, 5]} intensity={0.4} />
+        <directionalLight position={[-5, 3, 3]} intensity={0.4} />
         <Float>
           <mesh position={[1, -1, -3]} scale={[2.5, 2.5, 2.5]}>
             <sphereGeometry />
@@ -181,3 +181,10 @@ export const Experience = (props) => {
     </>
   );
 };
+
+
+
+
+
+
+
