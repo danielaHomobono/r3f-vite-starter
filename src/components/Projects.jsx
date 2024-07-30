@@ -20,10 +20,10 @@ export const projects = [
     description: "Project created with CSS and JS",
   },
   {
-    title: "Caculadora",
-    url: "https://danielahomobono.github.io/calculadora/",
-    image: "projects/calculadora.png",
-    description: "Calculator made with JavaScript.",
+    title: "Dino Play",
+    url: "https://danielahomobono.github.io/dinoJS/",
+    image: "projects/dino.png",
+    description: "Game made with JavaScript.",
   },
   {
     title: "Humaya",
@@ -48,6 +48,12 @@ export const projects = [
     url: "https://danielahomobono.github.io/context-app/",
     image: "projects/peliculas.png",
     description: "Movie site with React.",
+  },
+  {
+    title: "Caculadora",
+    url: "https://danielahomobono.github.io/calculadora/",
+    image: "projects/calculadora.png",
+    description: "Calculator made with JavaScript.",
   },
 ];
 
