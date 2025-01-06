@@ -32,6 +32,12 @@ export const projects = [
     description: "Application made with CSS and JavaScript.",
   },
   {
+    title: "Kotlin",
+    url: "https://github.com/danielaHomobono/AndroidClubDeportivo",
+    image: "projects/kotlinapp.png",
+    description: "mobile app for sports club management developed with Kotlin.",
+  },
+  {
     title: "Python",
     url: "https://danielahomobono.github.io/Simulacion3/",
     image: "projects/probabilidad.png",
