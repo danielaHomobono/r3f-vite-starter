@@ -34,7 +34,7 @@ export const projects = [
   {
     title: "Kotlin",
     url: "https://github.com/danielaHomobono/AndroidClubDeportivo",
-    image: "projects/kotlinapp.png",
+    image: "projects/kapp.png",
     description: "mobile app for sports club management developed with Kotlin.",
   },
   {
