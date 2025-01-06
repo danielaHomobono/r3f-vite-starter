@@ -32,13 +32,13 @@ export const projects = [
     description: "Application made with CSS and JavaScript.",
   },
   {
-    title: "Simulación con python",
+    title: "Python",
     url: "https://danielahomobono.github.io/Simulacion3/",
     image: "projects/probabilidad.png",
     description: "Simulation with Python. Analysis of charts and statistics.",
   },
   {
-    title: "Club Deportivo con C#",
+    title: "Club Deportivo C#",
     url: "https://github.com/danielaHomobono/SistemaClubDeportivo2.git",
     image: "projects/club.png",
     description: "Project developed with C#. Sports club management",

@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\clubdeportivo\\socio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|solutionrelative:clubdeportivo\\socio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|c:\\users\\usuario\\source\\repos\\clubdeportivo\\clubdeportivo\\actividaddeportiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|solutionrelative:clubdeportivo\\actividaddeportiva.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\clubdeportivo\\clubdeportivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|solutionrelative:clubdeportivo\\clubdeportivo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\clubdeportivo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F6E2023-B01E-4A02-8BFC-4BD3FC6EFB6B}|ClubDeportivo\\ClubDeportivo.csproj|solutionrelative:clubdeportivo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 100,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActividadDeportiva.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\ActividadDeportiva.cs",
+              "RelativeDocumentMoniker": "ClubDeportivo\\ActividadDeportiva.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\ActividadDeportiva.cs",
+              "RelativeToolTip": "ClubDeportivo\\ActividadDeportiva.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T13:09:24.634Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClubDeportivo.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\ClubDeportivo.cs",
+              "RelativeDocumentMoniker": "ClubDeportivo\\ClubDeportivo.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\ClubDeportivo.cs",
+              "RelativeToolTip": "ClubDeportivo\\ClubDeportivo.cs",
+              "ViewState": "AQIAAFIAAAAAAAAAAAAgwD0AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T13:47:05.445Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Socio.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\Socio.cs",
+              "RelativeDocumentMoniker": "ClubDeportivo\\Socio.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\Socio.cs",
+              "RelativeToolTip": "ClubDeportivo\\Socio.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAcwDQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T12:50:12.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\Program.cs",
+              "RelativeDocumentMoniker": "ClubDeportivo\\Program.cs",
+              "ToolTip": "C:\\Users\\Usuario\\source\\repos\\ClubDeportivo\\ClubDeportivo\\Program.cs",
+              "RelativeToolTip": "ClubDeportivo\\Program.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAmwD4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-26T12:48:42.703Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

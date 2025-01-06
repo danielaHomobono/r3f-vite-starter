@@ -153,11 +153,11 @@ const skills = [
     level: 80,
   },
   {
-    title: "Python",
+    title: "Kotlin",
     level: 60,
   },
   {
-    title: "3D Modeling",
+    title: "Python",
     level: 30,
   },
   {
@@ -290,22 +290,22 @@ const ProjectsSection = () => {
 
   return (
     <Section>
-      <div className="font-mono-extrabold flex w-full h-full gap-8 items-center justify-center mt-60">
-        <button
-          className="hover:text-indigo-600 transition-colors mt-8"
-          onClick={previousProject}
-        >
-          ← Previous
-        </button>
-        <h2 className="text-5xl font-bold  mt-10 ">Projects</h2>
-        <button
-          className="hover:text-indigo-600 transition-colors mt-8"
-          onClick={nextProject}
-        >
-          Next →
-        </button>
-      </div>
-    </Section>
+  <div className="font-mono-extrabold flex w-full h-full gap-8 items-center justify-center mt-60">
+    <button
+      className="text-2xl font-bold text-gray-600  hover:text-indigo-600 transition-colors mt-8"
+      onClick={previousProject}
+    >
+      ← Previous
+    </button>
+    <h2 className="text-5xl font-bold mt-10">Projects</h2>
+    <button
+      className="text-2xl font-bold text-gray-600 hover:text-indigo-600 transition-colors mt-10"
+      onClick={nextProject}
+    >
+       Next →
+    </button>
+  </div>
+</Section>
   );
 };
 

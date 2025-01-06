@@ -61,7 +61,11 @@ export const Experience = (props) => {
     <>
       <Background />
       <motion.group
-        position={[1.9072935059634513, 0.14400000000000002, 0.681801948466054]}
+        position={[
+          section === 0 ? 3.9072935059634513 : 1.9072935059634513,
+          0.14400000000000002,
+          0.681801948466054,
+        ]} // move avatar to the right only in section 0
         scale={[1.8, 1.8, 1.8]}
         animate={"" + section}
         transition={{
@@ -72,7 +76,7 @@ export const Experience = (props) => {
             scaleX: 7,
             scaleY: 7,
             scaleZ: 7,
-            y: -6,
+            y: -7,
           },
           1: {
             y: -viewport.height + 0.5,
@@ -100,7 +104,7 @@ export const Experience = (props) => {
           },
         }}
       >
-      <Avatar animation={characterAnimation} section={section} />
+        <Avatar animation={characterAnimation} section={section} />
       </motion.group>
       <ambientLight intensity={1} />
       <motion.group
@@ -121,15 +125,19 @@ export const Experience = (props) => {
 
       {/* SKILLS */}
       <motion.group
-        position={[0, -1.5, -10]}
+        position={[0, section === 0 ? 0.5 : -4.5, -15]} // moved up by increasing y value only in section 0
         animate={{
           z: section === 1 ? 0 : -10,
-          y: section === 1 ? -viewport.height : -1.5,
+          y: section === 1 ? -viewport.height : section === 0 ? -0.5 : -1.5,
         }}
       >
         <directionalLight position={[-5, 3, 3]} intensity={0.4} />
         <Float>
-          <mesh position={[1, -1, -3]} scale={[2.5, 2.5, 2.5]}>
+          <mesh
+            position={[1, section === 0 ? 1 : -1, -3]}
+            scale={[2.5, 2.5, 2.5]}
+          >
+            {/* moved up by increasing y value only in section 0 */}
             <sphereGeometry />
             <MeshDistortMaterial
               opacity={0.8}
@@ -141,7 +149,11 @@ export const Experience = (props) => {
           </mesh>
         </Float>
         <Float>
-          <mesh scale={[6, 6, 6]} position={[2, 2, -18]}>
+          <mesh
+            scale={[6, 6, 6]}
+            position={[2, section === 0 ? 4 : 2, -18]}
+          >
+            {/* moved up by increasing y value only in section 0 */}
             <sphereGeometry />
             <MeshDistortMaterial
               opacity={0.8}
@@ -153,7 +165,11 @@ export const Experience = (props) => {
           </mesh>
         </Float>
         <Float>
-          <mesh position={[-1, 4, -6]} scale={[3, 3, 3]}>
+          <mesh
+            position={[-1, section === 0 ? 6 : 4, -6]}
+            scale={[4, 4, 4]}
+          >
+            {/* moved up by increasing y value only in section 0 */}
             <sphereGeometry />
             <MeshWobbleMaterial
               opacity={0.8}
@@ -165,7 +181,11 @@ export const Experience = (props) => {
           </mesh>
         </Float>
         <Float>
-          <mesh position={[-3, 2, -8]} scale={[2, 2, 2]}>
+          <mesh
+            position={[-3, section === 0 ? 4 : 2, -8]}
+            scale={[2, 2, 2]}
+          >
+            {/* moved up by increasing y value only in section 0 */}
             <sphereGeometry />
             <MeshWobbleMaterial
               opacity={0.8}
@@ -181,10 +201,3 @@ export const Experience = (props) => {
     </>
   );
 };
-
-
-
-
-
-
-

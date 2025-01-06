@@ -1,0 +1,237 @@
+GRUPO
+----------
+danielahomobono81@gmail.com
+emi.toranzo@hotmail.com
+romizagordo@gmail.com
+rochidibello@gmail.com
+veronicahassen@gmail.com
+--------------------------
+
+
+
+
+
+import numpy as np
+import random as rd
+
+def crear_album(figus_total):
+    return np.zeros(figus_total)
+
+def comprar_paquete(figus_total, figus_paquete):
+    return rd.sample(range(figus_total), figus_paquete)
+
+def pegar_figus(album, paquete):
+    album[paquete] = 1
+    return album
+
+def album_incompleto(album):
+    return 0 in album
+
+def cuantos_paquetes(figus_total, figus_paquete):
+    album = crear_album(figus_total)
+    paquetes = 0
+    while album_incompleto(album):
+        paquete = comprar_paquete(figus_total, figus_paquete)
+        album = pegar_figus(album, paquete)
+        paquetes += 1
+    return paquetes
+
+# Simulación
+N = 100
+figus_total = 860
+figus_paquete = 5
+rd.seed(123)
+muestras = [cuantos_paquetes(figus_total, figus_paquete) for _ in range(N)]
+print(f"Se necesitan en promedio {np.mean(muestras)} paquetes para llenar el álbum.")
+
+Este código simula el proceso de llenar un álbum de figuritas. Primero, se definen varias funciones para simular los diferentes pasos del proceso. Luego, en la sección de simulación, se ejecuta la simulación N
+ veces y se calcula el promedio de paquetes necesarios para llenar el álbum. ¡Espero que esto te ayude! 😊
+Define varias funciones para simular los diferentes pasos del proceso de llenado del álbum de figuritas.
+La función crear_album crea un álbum vacío.
+La función comprar_paquete simula la compra de un paquete de figuritas.
+La función pegar_figus pega las figuritas del paquete en el álbum.
+La función album_incompleto verifica si el álbum está incompleto.
+La función cuantos_paquetes simula el proceso de llenado del álbum y devuelve la cantidad de paquetes que se necesitaron para llenarlo.
+En la sección de simulación, se ejecuta la simulación N
+ veces y se calcula el promedio de paquetes necesarios para llenar el álbum.
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Crear el histograma
+sns.histplot(muestras, kde=False, bins=30)
+
+# Agregar títulos y etiquetas
+plt.title('Histograma de la cantidad de paquetes necesarios')
+plt.xlabel('Cantidad de paquetes')
+plt.ylabel('Frecuencia')
+
+# Mostrar el gráfico
+plt.show()
+-----------------------
+otra forma
+--------------------
+import numpy as np
+
+def cuantos_paquetes(figus_total, figus_paquete):
+    album = np.zeros(figus_total)
+    paquetes = 0
+    figuritas_coleccionadas = 0
+
+    while figuritas_coleccionadas < figus_total:
+        paquete = np.random.choice(range(figus_total), figus_paquete, replace=False)
+        for figurita in paquete:
+            if album[figurita] == 0:
+                album[figurita] = 1
+                figuritas_coleccionadas += 1
+        paquetes += 1
+
+    return paquetes
+
+# Simulación
+N = 100
+figus_total = 860
+figus_paquete = 5
+np.random.seed(123)
+muestras = [cuantos_paquetes(figus_total, figus_paquete) for _ in range(N)]
+print(f"Se necesitan en promedio {np.mean(muestras)} paquetes para llenar el álbum.")
+
+
+
+
+
+------------------------------------------
+chat
+---------
+import numpy as np
+
+def crear_album(figus_total):
+    return np.zeros(figus_total)
+
+def comprar_paquete(figus_total, figus_paquete):
+    return np.random.choice(range(figus_total), size=figus_paquete, replace=False)
+
+def pegar_figus(album, paquete):
+    for figurita in paquete:
+        album[figurita] = 1
+
+def album_incompleto(album):
+    return 0 in album
+Ahora, vamos a definir la función cuantos_paquetes que simulará el llenado del álbum hasta que esté completo y contará cuántos paquetes se necesitaron:
+
+python
+Copiar código
+def cuantos_paquetes(figus_total, figus_paquete):
+    album = crear_album(figus_total)
+    paquetes_comprados = 0
+    while album_incompleto(album):
+        paquete = comprar_paquete(figus_total, figus_paquete)
+        pegar_figus(album, paquete)
+        paquetes_comprados += 1
+    return paquetes_comprados
+Ahora, vamos a generar las muestras aleatorias y calcular el promedio de paquetes necesarios en base a esas muestras:
+
+python
+Copiar código
+np.random.seed(42)  # Fijamos la semilla para reproducibilidad
+N = 100  # Número de repeticiones
+figus_total = 860  # Cantidad de figuritas del álbum
+figus_paquete = 5  # Cantidad de figuritas por paquete
+
+muestras = [cuantos_paquetes(figus_total, figus_paquete) for _ in range(N)]
+promedio_paquetes = np.mean(muestras)
+print("Promedio de paquetes necesarios:", promedio_paquetes)
+Con esto, hemos realizado la simulación y obtenido una estimación del promedio de paquetes necesarios para completar el álbum del Mundial Qatar 2022. Si deseas representar el histograma de la cantidad de paquetes necesarios, podemos hacerlo de la siguiente manera utilizando seaborn:
+
+python
+Copiar código
+import seaborn as sns
+
+sns.histplot(muestras, bins=20, kde=True)
+Esto generará un histograma de las muestras con 20 bins y una estimación de la densidad kernel.
+--------------------
+import numpy as np
+
+def crear_album(figus_total):
+    return np.zeros(figus_total)
+
+def comprar_paquete(figus_total, figus_paquete):
+    return np.random.choice(range(figus_total), size=figus_paquete, replace=False)
+
+def pegar_figus(album, paquete):
+    album[paquete] = 1
+
+def album_incompleto(album):
+    return not np.all(album)
+
+def cuantos_paquetes(figus_total, figus_paquete):
+    album = crear_album(figus_total)
+    paquetes_comprados = 0
+    while album_incompleto(album):
+        paquete = comprar_paquete(figus_total, figus_paquete)
+        pegar_figus(album, paquete)
+        paquetes_comprados += 1
+    return paquetes_comprados
+
+np.random.seed(42)  # Fijamos la semilla para reproducibilidad
+N = 100  # Número de repeticiones
+figus_total = 860  # Cantidad de figuritas del álbum
+figus_paquete = 5  # Cantidad de figuritas por paquete
+
+muestras = [cuantos_paquetes(figus_total, figus_paquete) for _ in range(N)]
+promedio_paquetes = np.mean(muestras)
+print("Promedio de paquetes necesarios:", promedio_paquetes)
+
+
+
+      
+      
+        
+      
+    
+  
+
+  
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+       
+  
+  
+
+  
+  
+      
+          
+  
+
+          
+  
+
+          
+        
+    
+  
+   
+  
+
+
+    
+
+
+    
+    
+    
+    
+    
+    
+    
+  

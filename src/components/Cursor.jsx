@@ -10,6 +10,7 @@ let outlineY = 0;
 export const Cursor = () => {
   const cursorOutline = useRef(null);
   const [hoverButton, setHoverButton] = useState(false);
+  const [hue, setHue] = useState(0);
 
   const animate = () => {
     let distX = mouseX - outlineX;
@@ -30,6 +31,7 @@ export const Cursor = () => {
     const onMouseMove = (event) => {
       mouseX = event.pageX;
       mouseY = event.pageY;
+      setHue((prevHue) => (prevHue + 1) % 360);
     };
 
     document.addEventListener("mousemove", onMouseMove);
@@ -66,9 +68,12 @@ export const Cursor = () => {
       className={`z-50 fixed -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none transition-transform ${
         hoverButton
           ? "bg-transparent border-2 border-indigo-900 w-5 h-5"
-          : "bg-yellow-300 w-4 h-4"
+          : "w-4 h-4"
       }`}
       ref={cursorOutline}
+      style={{
+        backgroundColor: hoverButton ? "transparent" : `hsl(${hue}, 100%, 50%)`,
+      }}
     ></div>
   );
 };
