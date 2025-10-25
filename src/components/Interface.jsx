@@ -51,13 +51,13 @@ const AboutSection = () => {
   return (
     <Section mobileTop className="p-8 rounded-lg shadow-lg">
       <div className="font-mono text-2xl font-extrabold">
-        <p className="text-6xl font-bold leading-snug tracking-tight text-gray-800">
+        <p className="text-3xl md:text-6xl font-bold leading-snug tracking-tight text-gray-800">
           Hi, I'm
           <br />
           <span className="text-white px-1 font-extrabold">Daniela Homobono</span>
         </p>
         <motion.p
-          className="text-4xl text-gray-800 mt-4 font-bold"
+          className="text-xl md:text-4xl text-gray-800 mt-4 font-bold"
           initial={{
             opacity: 0,
             y: 25,
@@ -76,7 +76,7 @@ const AboutSection = () => {
           always learning new skills.
         </motion.p>
         <motion.div
-          className="text-xxl mt-8 font-bold text-gray-600"
+          className="text-sm md:text-xl mt-8 font-bold text-gray-600"
           initial={{
             opacity: 0,
             y: 25,
@@ -97,7 +97,7 @@ const AboutSection = () => {
             profession: <span className="text-white">"Developer"</span>,
           </p>
           <p className="ml-4 text-gray-800">
-            passion: <span className="text-white">"Always learning new skills"</span>,
+            passion: <span className="text-white">"Always learning<br />new skills"</span>,
           </p>
           <p className="ml-4 text-gray-800">
             currentFocus: <span className="text-white">"Studying software development"</span>
@@ -106,11 +106,17 @@ const AboutSection = () => {
             &#125;;
           </p>
           <p className="mt-4 text-gray-800">
-            console.log(<span className="text-blue-400">"Turning ideas into reality!"</span>);
+            const skills = <span className="text-white">["React", <br />"JavaScript", "Three.js"]</span>;
+          </p>
+          <p className="text-gray-800">
+            const experience = <span className="text-white">"Building <br />amazing web experiences"</span>;
+          </p>
+          <p className="mt-4 text-gray-800">
+            console.log(<span className="text-blue-400">"Turning ideas <br />into reality!"</span>);
           </p>
         </motion.div>
         <motion.button
-          className="bg-blue-400 text-white py-4 px-8 rounded-lg font-bold text-xl mt-16"
+          className="bg-blue-400 text-white py-3 px-6 md:py-4 md:px-8 rounded-lg font-bold text-lg md:text-xl mt-8 md:mt-16"
           initial={{
             opacity: 0,
             y: 25,
