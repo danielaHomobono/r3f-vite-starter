@@ -24,7 +24,7 @@ export const Experience = (props) => {
   const cameraLookAtX = useMotionValue();
 
   useEffect(() => {
-    animate(cameraPositionX, menuOpened ? -5 : 0, {
+    animate(cameraPositionX, menuOpened ? -7 : 0, {
       ...framerMotionConfig,
     });
     animate(cameraLookAtX, menuOpened ? 5 : 0, {
@@ -75,8 +75,13 @@ export const Experience = (props) => {
           0: {
             scaleX: 7,
             scaleY: 7,
-            scaleZ: 7,
-            y: -7,
+            scaleZ: 8,
+            y: -8,
+            x: 3,
+            z: 0,
+            rotateY: -0.4,
+            rotateX: 0,
+            rotateZ: 0
           },
           1: {
             y: -viewport.height + 0.5,
@@ -99,7 +104,7 @@ export const Experience = (props) => {
             x: 0.3,
             z: 8.5,
             rotateX: 0,
-            rotateY: -Math.PI / 4,
+            rotateY: -0.5,
             rotateZ: 0,
           },
         }}

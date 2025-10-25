@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { Cursor } from "./components/Cursor";
 import { Experience } from "./components/Experience";
 import { Interface } from "./components/Interface";
+import { Loader } from "./components/Loader";
 import { Menu } from "./components/Menu";
 import { ScrollManager } from "./components/ScrollManager";
 import { framerMotionConfig } from "./config";
@@ -13,6 +14,7 @@ import { framerMotionConfig } from "./config";
 function App() {
   const [section, setSection] = useState(0);
   const [menuOpened, setMenuOpened] = useState(false);
+  const [loading, setLoading] = useState(true);
   
 
   useEffect(() => {
@@ -21,8 +23,9 @@ function App() {
 
   return (
     <>
-    
-      <MotionConfig
+      {loading && <Loader onComplete={() => setLoading(false)} />}
+      {!loading && (
+        <MotionConfig
         transition={{
           ...framerMotionConfig,
         }}
@@ -45,7 +48,8 @@ function App() {
           setMenuOpened={setMenuOpened}
         />
         <Cursor />
-      </MotionConfig>
+        </MotionConfig>
+      )}
       <Leva hidden />
     </>
   );
